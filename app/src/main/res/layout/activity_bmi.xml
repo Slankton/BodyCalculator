@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#f7e9740d">
+
+    static string left= "10sp";
 
     <TextView
         android:layout_width="wrap_content"
@@ -10,14 +13,17 @@
         android:text="@string/groesse"
         android:id="@+id/groesseText"
         android:textSize="30sp"
-        android:textIsSelectable="true" />
+        android:textIsSelectable="true"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/groesseAlert"
-        android:id="@+id/alertGroesse"
+        android:id="@+id/groesseAlert"
         android:textColor="#de1717"
         android:textSize="20sp"
         android:visibility="gone" />
@@ -29,7 +35,8 @@
         android:id="@+id/groesseInput"
         android:layout_gravity="center_horizontal"
         android:inputType="numberDecimal"
-        android:numeric="decimal" />
+        android:numeric="decimal"
+        android:layout_marginLeft="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -37,14 +44,16 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/gewicht"
         android:id="@+id/gewichtText"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/gewichtAlert"
-        android:id="@+id/alertGewicht"
+        android:id="@+id/gewichtAlert"
         android:textColor="#de1717"
         android:textSize="20sp"
         android:visibility="gone" />
@@ -55,7 +64,8 @@
         android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/gewichtInput"
-        android:numeric="decimal" />
+        android:numeric="decimal"
+        android:layout_marginLeft="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -63,12 +73,15 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/geschlecht"
         android:id="@+id/geschlechtText"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10sp" />
 
     <RadioGroup
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp">
 
         <RadioButton
             android:layout_width="fill_parent"
@@ -76,7 +89,8 @@
             android:text="@string/maennlich"
             android:id="@+id/maennlichRadio"
             android:checked="false"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@android:color/white" />
 
         <RadioButton
             android:layout_width="fill_parent"
@@ -84,7 +98,8 @@
             android:text="@string/weiblich"
             android:id="@+id/weiblichRadio"
             android:checked="true"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textColor="@android:color/white" />
 
     </RadioGroup>
 
@@ -99,14 +114,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="@string/ihrWHRbetraegt"
+        android:text="@string/ihrBMIBetraegt"
         android:id="@+id/ergebnisText"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="10sp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/ergebnisOutput"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#f7e9740d" />
 </LinearLayout>

@@ -8,20 +8,23 @@
     <string name="bmi">BMI</string>
     <string name="waistHipRatio">Waist-Hip-Ratio</string>
 
-    <!--BMI-->
+    <!--Allgemein-->
 
+    <string name="weiblich">weiblich</string>
+    <string name="maennlich">männlich</string>
     <string name="uebergewicht">Übergewicht</string>
     <string name="untergewicht">Untergewicht</string>
     <string name="normalgewicht">Normalgewicht</string>
     <string name="adipositas">Adipositas</string>
+    <string name="geschlecht">Geschlecht</string>
+    <string name="berechne">berechne</string>
     <string name="massiveAdipositas">massive Adipositas</string>
-    <string name="weiblich">weiblich</string>
-    <string name="maennlich">maennlich</string>
+
+    <!--BMI-->
+
     <string name="groesse">Größe</string>
     <string name="gewicht">Gewicht</string>
-    <string name="geschlecht">Geschlecht</string>
     <string name="ihrBMIBetraegt">Ihr BMI beträgt:</string>
-    <string name="berechne">berechne</string>
     <string name="gewichtAlert">Bitte geben Sie eine gültiges Gewicht ein</string>
     <string name="groesseAlert">Bitte geben Sie eine gültige Größe ein</string>
 
@@ -30,5 +33,7 @@
     <string name="taillenumfang">Taillenumfang</string>
     <string name="hueftumfang">Hüftumfang</string>
     <string name="ihrWHRbetraegt">Ihr Waist-Hip-Ratio beträgt</string>
+    <string name="tailleAlert">Bitte geben Sie einen gültigen Taillenumfang ein</string>
+    <string name="huefteAlert">Bitte geben Sie einen gültigen Hüftumfang ein</string>
 
 </resources>
