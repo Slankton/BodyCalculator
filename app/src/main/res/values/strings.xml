@@ -1,0 +1,34 @@
+<resources>
+
+    <string name="app_name">BodyCalculator</string>
+    <string name="action_settings">Settings</string>
+
+    <!--Menue-->
+
+    <string name="bmi">BMI</string>
+    <string name="waistHipRatio">Waist-Hip-Ratio</string>
+
+    <!--BMI-->
+
+    <string name="uebergewicht">Übergewicht</string>
+    <string name="untergewicht">Untergewicht</string>
+    <string name="normalgewicht">Normalgewicht</string>
+    <string name="adipositas">Adipositas</string>
+    <string name="massiveAdipositas">massive Adipositas</string>
+    <string name="weiblich">weiblich</string>
+    <string name="maennlich">maennlich</string>
+    <string name="groesse">Größe</string>
+    <string name="gewicht">Gewicht</string>
+    <string name="geschlecht">Geschlecht</string>
+    <string name="ihrBMIBetraegt">Ihr BMI beträgt:</string>
+    <string name="berechne">berechne</string>
+    <string name="gewichtAlert">Bitte geben Sie eine gültiges Gewicht ein</string>
+    <string name="groesseAlert">Bitte geben Sie eine gültige Größe ein</string>
+
+    <!--Waist-Hip-Ratio-->
+
+    <string name="taillenumfang">Taillenumfang</string>
+    <string name="hueftumfang">Hüftumfang</string>
+    <string name="ihrWHRbetraegt">Ihr Waist-Hip-Ratio beträgt</string>
+
+</resources>

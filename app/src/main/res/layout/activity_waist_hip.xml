@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/taillenumfang"
+        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:textIsSelectable="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/tailleText"
+        android:inputType="numberDecimal"
+        android:numeric="decimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/hueftumfang"
+        android:id="@+id/textView2"
+        android:textSize="30sp"
+        android:textIsSelectable="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:inputType="numberDecimal"
+        android:numeric="decimal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/berechne"
+        android:id="@+id/BerechneButton"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ihrWHRbetraegt"
+        android:id="@+id/ergebnisText"
+        android:textSize="30sp" />
+</LinearLayout>

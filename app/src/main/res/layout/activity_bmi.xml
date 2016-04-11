@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/groesse"
+        android:id="@+id/groesseText"
+        android:textSize="30sp"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/groesseAlert"
+        android:id="@+id/alertGroesse"
+        android:textColor="#de1717"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/groesseInput"
+        android:layout_gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:numeric="decimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/gewicht"
+        android:id="@+id/gewichtText"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/gewichtAlert"
+        android:id="@+id/alertGewicht"
+        android:textColor="#de1717"
+        android:textSize="20sp"
+        android:visibility="gone" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/gewichtInput"
+        android:numeric="decimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/geschlecht"
+        android:id="@+id/geschlechtText"
+        android:textSize="30sp" />
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/maennlich"
+            android:id="@+id/maennlichRadio"
+            android:checked="false"
+            android:layout_weight="1" />
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/weiblich"
+            android:id="@+id/weiblichRadio"
+            android:checked="true"
+            android:layout_weight="1" />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/berechne"
+        android:id="@+id/buttonBerechne"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ihrWHRbetraegt"
+        android:id="@+id/ergebnisText"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/ergebnisOutput"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
