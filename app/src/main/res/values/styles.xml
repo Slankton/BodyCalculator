@@ -1,8 +1,46 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">#f7e9740d</item>
+        <item name="android:layout_marginLeft">5sp</item>
+        <item name="android:layout_marginRight">5sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
+
+    <style name="button">
+        <item name="android:background">#e9520c</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">10sp</item>
+        <item name="android:layout_marginBottom">10sp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="alert">
+        <item name="android:textColor">#de1717</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+
+    <style name="input">
+        <item name="android:textSize">15sp</item>
+        <item name="android:ems">10</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:inputType">numberDecimal</item>
+        <item name="android:numeric">decimal</item>
+    </style>
+
+    <style name="radio">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:buttonTint">#de1717</item>
+    </style>
+
+
 
 </resources>

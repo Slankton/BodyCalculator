@@ -1,125 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WaistHip"
-    android:background="#f7e9740d">
+    tools:context=".WaistHip">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/taillenumfang"
         android:id="@+id/tailleText"
-        android:textSize="30sp"
         android:textIsSelectable="true"
-        android:textColor="@android:color/white" />
+        android:layout_marginTop="10sp" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/tailleInput"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:textColor="@android:color/white" />
+        style="@style/input"
+        android:id="@+id/tailleInput"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        style="@style/alert"
         android:text="@string/tailleAlert"
-        android:id="@+id/tailleAlert"
-        android:textColor="#de1717"
-        android:textSize="20sp"
-        android:visibility="gone" />
+        android:id="@+id/tailleAlert" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/hueftumfang"
         android:id="@+id/huefteText"
-        android:textSize="30sp"
-        android:textIsSelectable="true"
-        android:textColor="@android:color/white" />
+        android:textIsSelectable="true" />
 
     <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:id="@+id/huefteInput"
-        android:inputType="numberDecimal"
-        android:numeric="decimal"
-        android:textColor="@android:color/white" />
+        style="@style/input"
+        android:id="@+id/huefteInput"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        style="@style/alert"
         android:text="@string/huefteAlert"
-        android:id="@+id/huefteAlert"
-        android:textColor="#de1717"
-        android:textSize="20sp"
-        android:visibility="gone"
-        android:layout_gravity="center_horizontal" />
+        android:id="@+id/huefteAlert" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/geschlecht"
-        android:id="@+id/textView"
-        android:textSize="30sp"
-        android:textColor="@android:color/white" />
+        android:id="@+id/textView" />
 
     <RadioGroup
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal">
 
         <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/radio"
             android:text="@string/maennlich"
             android:id="@+id/maennlichRadio"
-            android:checked="false"
-            android:layout_weight="1"
-            android:textColor="@android:color/white" />
+            android:checked="false" />
 
         <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            style="@style/radio"
             android:text="@string/weiblich"
             android:id="@+id/weiblichRadio"
-            android:checked="true"
-            android:layout_weight="1"
-            android:textColor="@android:color/white" />
+            android:checked="true" />
     </RadioGroup>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/button"
         android:text="@string/berechne"
-        android:id="@+id/buttonBerechne"
-        android:layout_gravity="center_horizontal"
-        android:background="#eaaa20"
-        android:textColor="@android:color/white" />
+        android:id="@+id/buttonBerechne"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/ihrWHRbetraegt"
-        android:id="@+id/ergebnisText"
-        android:textSize="30sp"
-        android:textColor="@android:color/white" />
+        android:id="@+id/ergebnisText" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:id="@+id/ergebnisOutput"
         android:layout_gravity="center_horizontal"

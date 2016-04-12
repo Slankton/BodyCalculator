@@ -1,6 +1,7 @@
 package com.example.slanktonen.bodycalculator;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +11,17 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
+
 public class WaistHip extends Activity {
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +29,9 @@ public class WaistHip extends Activity {
         setContentView(R.layout.activity_waist_hip);
 
         calculate();
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     @Override
@@ -42,7 +56,7 @@ public class WaistHip extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void calculate(){
+    public void calculate() {
 
         Button berechne = (Button) findViewById(R.id.buttonBerechne);
         berechne.setOnClickListener(new View.OnClickListener() {
@@ -78,9 +92,8 @@ public class WaistHip extends Activity {
     }
 
     boolean checkData(float taille, float huefte) {
-        boolean ret = true;
 
-        return ret;
+        return true;
     }
 
     Boolean isNull(String taille, String huefte) {
@@ -88,18 +101,56 @@ public class WaistHip extends Activity {
         if (taille.isEmpty()) {
             findViewById(R.id.tailleAlert).setVisibility(View.VISIBLE);
             ret = true;
-        }
-        else{
+        } else {
             findViewById(R.id.tailleAlert).setVisibility(View.GONE);
         }
         if (huefte.isEmpty()) {
             findViewById(R.id.huefteAlert).setVisibility(View.VISIBLE);
             ret = true;
-        }
-        else{
+        } else {
             findViewById(R.id.huefteAlert).setVisibility(View.GONE);
         }
 
         return ret;
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "WaistHip Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.example.slanktonen.bodycalculator/http/host/path")
+        );
+        AppIndex.AppIndexApi.start(client, viewAction);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        Action viewAction = Action.newAction(
+                Action.TYPE_VIEW, // TODO: choose an action type.
+                "WaistHip Page", // TODO: Define a title for the content shown.
+                // TODO: If you have web page content that matches this app activity's content,
+                // make sure this auto-generated web page URL is correct.
+                // Otherwise, set the URL to null.
+                Uri.parse("http://host/path"),
+                // TODO: Make sure this auto-generated app deep link URI is correct.
+                Uri.parse("android-app://com.example.slanktonen.bodycalculator/http/host/path")
+        );
+        AppIndex.AppIndexApi.end(client, viewAction);
+        client.disconnect();
     }
 }

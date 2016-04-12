@@ -6,6 +6,7 @@
     <!--Menue-->
 
     <string name="bmi">BMI</string>
+    <string name="bmr">BMR</string>
     <string name="waistHipRatio">Waist-Hip-Ratio</string>
 
     <!--Allgemein-->
@@ -35,5 +36,9 @@
     <string name="ihrWHRbetraegt">Ihr Waist-Hip-Ratio beträgt</string>
     <string name="tailleAlert">Bitte geben Sie einen gültigen Taillenumfang ein</string>
     <string name="huefteAlert">Bitte geben Sie einen gültigen Hüftumfang ein</string>
+
+    <!--BMR-->
+
+
 
 </resources>

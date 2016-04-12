@@ -15,7 +15,7 @@ import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class BMI extends Activity {
+public class BMR extends Activity {
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -25,13 +25,12 @@ public class BMI extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bmi);
+        setContentView(R.layout.activity_bmr);
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
 
-        calculate();
     }
 
     @Override
@@ -56,89 +55,7 @@ public class BMI extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void calculate(){
-
-        Button berechne = (Button) findViewById(R.id.buttonBerechne);
-        berechne.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String groesse = ((EditText) findViewById(R.id.groesseInput)).getText().toString();
-                String gewicht = ((EditText) findViewById(R.id.gewichtInput)).getText().toString();
-                if (!isNull(groesse, gewicht)) {
-                    if (groesse.length() == 3 && !groesse.contains(".")) {
-                        groesse = groesse.substring(0, 1) + "." + groesse.substring(1, 3);
-                    }
-                    Float groesseF = Float.parseFloat(groesse);
-                    Float gewichtF = Float.parseFloat(gewicht);
-
-                    if (checkData(groesseF, gewichtF)) {
-                        float ergebnis = gewichtF / (groesseF * groesseF);
-                        TextView ergebnisOutput = (TextView) findViewById(R.id.ergebnisOutput);
-                        String auswertung = auswertenBMI(ergebnis);
-                        ergebnisOutput.setText(String.valueOf(ergebnis).substring(0,5) + "\n" + auswertung);
-                    }
-                }
-            }
-        });
-
-    }
-
-    //Art des Uebergewichts
-    String auswertenBMI(float ergebnis) {
-        boolean weiblich = ((RadioButton) findViewById(R.id.weiblichRadio)).isChecked();
-        if ((ergebnis < 19 && weiblich) || (ergebnis < 20 && !weiblich))
-            return getString(R.string.untergewicht);
-        else if ((ergebnis >= 19 && ergebnis <= 24 && weiblich) || (ergebnis >= 20 && ergebnis <= 25 && !weiblich))
-            return getString(R.string.normalgewicht);
-        else if ((ergebnis > 24 && ergebnis <= 30 && weiblich) || (ergebnis > 25 && ergebnis <= 30 && !weiblich))
-            return getString(R.string.uebergewicht);
-        else if (ergebnis > 30 && ergebnis <= 40)
-            return getString(R.string.adipositas);
-        else
-            return getString(R.string.massiveAdipositas);
-    }
-
-    //Sind die Daten realistisch?
-    boolean checkData(float groesse, float gewicht) {
-        boolean ret = true;
-        if (groesse < 1.00 || groesse > 2.50) {
-            findViewById(R.id.groesseAlert).setVisibility(View.VISIBLE);
-            ret = false;
-        }else{
-            findViewById(R.id.groesseAlert).setVisibility(View.GONE);
-        }
-        if (gewicht < 31 || gewicht > 249) {
-            findViewById(R.id.gewichtAlert).setVisibility(View.VISIBLE);
-            ret = false;
-        }else{
-            findViewById(R.id.gewichtAlert).setVisibility(View.GONE);
-        }
-
-        return ret;
-    }
-
-    //Wurde etwas eingegeben
-    boolean isNull(String groesse, String gewicht) {
-        boolean ret = false;
-        if (groesse.isEmpty()) {
-            findViewById(R.id.groesseAlert).setVisibility(View.VISIBLE);
-            ret = true;
-        }
-        else{
-            findViewById(R.id.groesseAlert).setVisibility(View.GONE);
-        }
-        if (gewicht.isEmpty()) {
-            findViewById(R.id.gewichtAlert).setVisibility(View.VISIBLE);
-            ret = true;
-        }
-        else{
-            findViewById(R.id.gewichtAlert).setVisibility(View.GONE);
-        }
-
-        return ret;
-    }
-
-    @Override
+       @Override
     public void onStart() {
         super.onStart();
 

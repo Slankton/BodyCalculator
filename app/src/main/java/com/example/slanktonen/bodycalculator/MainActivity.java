@@ -19,7 +19,7 @@ public class MainActivity extends ListActivity {
         setContentView(R.layout.activity_main);
 
         ListView list = getListView();
-        String[] listItems = new String[] {getString(R.string.bmi), getString(R.string.waistHipRatio), "Elem2", "Elem3", "Elem4"};
+        String[] listItems = new String[] {getString(R.string.bmi), getString(R.string.bmr),getString(R.string.waistHipRatio), "Elem2", "Elem3"};
 
         //Jedes Elemet der Liste wird zu einem Object pro Zeile gemapped
        this.setListAdapter(new ArrayAdapter<>(this, R.layout.listview_layout, R.id.Itemname, listItems));
@@ -31,10 +31,10 @@ public class MainActivity extends ListActivity {
                         intent = new Intent(getApplicationContext(), BMI.class);
                         break;
                     case 1:
-                        intent = new Intent(getApplicationContext(), WaistHip.class);
+                        intent = new Intent(getApplicationContext(), BMR.class);
                         break;
                     default:
-                        intent = new Intent(getApplicationContext(), BMI.class);
+                        intent = new Intent(getApplicationContext(), WaistHip.class);
                         break;
                 }
                 startActivity(intent);

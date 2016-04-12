@@ -8,17 +8,13 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:paddingTop="10dp"
-        android:paddingRight="10dp"
         android:paddingBottom="10dp"
         android:src="@drawable/water"
         android:background="#ffffff" />
 
     <TextView
-        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:id="@+id/Itemname"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:textColor="#ffffff" />
+        android:gravity="center" />
 
 </LinearLayout>
